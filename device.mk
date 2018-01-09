@@ -293,6 +293,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.recomputecrop=0
+
+PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
 # DRM
