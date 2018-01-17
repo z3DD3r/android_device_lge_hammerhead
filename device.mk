@@ -95,7 +95,7 @@ PRODUCT_COPY_FILES += \
 
 # For GPS
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/sec_config:system/etc/sec_config
+    device/lge/hammerhead/sec_config:system/vendor/etc/sec_config
 
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
