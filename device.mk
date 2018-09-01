@@ -203,6 +203,9 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     Snap
 
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/configs/external_camera_config.xml:system/vendor/etc/external_camera_config.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service \
