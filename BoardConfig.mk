@@ -53,6 +53,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth
 # Encryption
 TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := device/lge/hammerhead/config.fs
+
 # Wifi related defines
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 BOARD_WLAN_DEVICE           := bcmdhd
@@ -98,6 +101,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 13725837312
 BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 
 # Define kernel config for inline building
 TARGET_KERNEL_CONFIG := lineageos_hammerhead_defconfig
