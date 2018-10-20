@@ -154,6 +154,10 @@
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count   u:object_r:sysfs_thermal:s0
 /sys/devices/f9923000\.i2c/i2c-84/84-0036/power_supply/battery/capacity   u:object_r:sysfs_batteryinfo:s0
 
+# sysfs - net
+/sys/devices/msm_sdcc\.[0-9]/mmc_host/.*/net(/.*)? u:object_r:sysfs_net:s0
+/sys/devices/virtual/net(/.*)?                     u:object_r:sysfs_net:s0
+
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
 
