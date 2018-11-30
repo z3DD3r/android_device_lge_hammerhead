@@ -175,3 +175,6 @@
 
 # sysfs - block/storage
 /sys/devices/msm_sdcc\.[0-9]/mmc_host/mmc[0-9]/mmc[0-9]:[0-9]+/block/mmcblk[0-9]/stat u:object_r:sysfs_disk_stat:s0
+
+# sysfs - usb
+/sys/devices/msm_dwc3/[a-f0-9]+\.dwc3/gadget/lun[0-9]+(/.*)? u:object_r:sysfs_usb_storage_gadget:s0
