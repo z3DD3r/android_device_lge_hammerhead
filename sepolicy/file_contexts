@@ -152,7 +152,6 @@
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk        u:object_r:sysfs_thermal:s0
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk    u:object_r:sysfs_thermal:s0
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count   u:object_r:sysfs_thermal:s0
-/sys/devices/f9923000\.i2c/i2c-84/84-0036/power_supply/battery/capacity   u:object_r:sysfs_batteryinfo:s0
 
 # sysfs - net
 /sys/devices/msm_sdcc\.[0-9]/mmc_host/.*/net(/.*)? u:object_r:sysfs_net:s0
@@ -178,3 +177,11 @@
 
 # sysfs - usb
 /sys/devices/msm_dwc3/[a-f0-9]+\.dwc3/gadget/lun[0-9]+(/.*)? u:object_r:sysfs_usb_storage_gadget:s0
+
+# sysfs - power_supply
+/sys/devices/f9923000\.i2c/i2c-84/84-0036/power_supply/battery(/.*)? u:object_r:sysfs_batteryinfo:s0
+/sys/devices/f9923000\.i2c/i2c-84/84-006b/power_supply/ac(/.*)?      u:object_r:sysfs_batteryinfo:s0
+/sys/devices/msm_dwc3/power_supply/usb(/.*)?                         u:object_r:sysfs_batteryinfo:s0
+/sys/devices/virtual/power_supply/touch(/.*)?                        u:object_r:sysfs_batteryinfo:s0
+/sys/devices/battery_tm_ctrl.78/power_supply/batt_therm(/.*)?        u:object_r:sysfs_batteryinfo:s0
+/sys/devices/bq51013b_wlc.77/power_supply/wireless(/.*)?             u:object_r:sysfs_batteryinfo:s0
