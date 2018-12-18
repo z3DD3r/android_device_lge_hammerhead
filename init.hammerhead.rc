@@ -21,8 +21,6 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
-    symlink /sdcard /storage/sdcard0
-
     # ZRAM
     write /sys/block/zram0/comp_algorithm lz4
     write /proc/sys/vm/page-cluster 0
