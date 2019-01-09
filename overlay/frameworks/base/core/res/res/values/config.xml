@@ -302,4 +302,6 @@
         <item>INTERMEDIATE_POS=0</item>
     </string-array>
 
+    <!-- Disable rounded corners on windows to improve graphics performance -->
+    <bool name="config_supportsRoundedCornersOnWindows">false</bool>
 </resources>
