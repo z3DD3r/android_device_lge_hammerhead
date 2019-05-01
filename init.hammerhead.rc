@@ -330,10 +330,10 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
-service charger /charger
+service charger /system/bin/charger
     class charger
-    critical
-    seclabel u:r:healthd:s0
+    group system graphics
+    seclabel u:r:charger:s0
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
