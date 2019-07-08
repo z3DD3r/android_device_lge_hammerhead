@@ -238,6 +238,10 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     gps.msm8974
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service.software
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
