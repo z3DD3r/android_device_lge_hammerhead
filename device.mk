@@ -19,6 +19,8 @@
 #
 # Everything in this directory will become public
 
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/init.hammerhead.rc:root/init.hammerhead.rc \
