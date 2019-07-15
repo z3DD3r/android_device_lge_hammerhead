@@ -109,8 +109,6 @@ BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 TARGET_KERNEL_CONFIG := lineageos_hammerhead_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
 
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 TARGET_RECOVERY_FSTAB = device/lge/hammerhead/fstab.hammerhead
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead

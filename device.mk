@@ -498,6 +498,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.enable_debug=0 \
     persist.sys.ssr.enable_ramdumps=0
 
+# Charger
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.charger.enable_suspend=true
+
 # Device was launched with K
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 
