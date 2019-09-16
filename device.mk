@@ -19,6 +19,9 @@
 #
 # Everything in this directory will become public
 
+# APEX
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/init.hammerhead.rc:root/init.hammerhead.rc \
