@@ -368,3 +368,6 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user system
     group net_raw
+
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
