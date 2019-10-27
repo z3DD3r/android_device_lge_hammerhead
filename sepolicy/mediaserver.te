@@ -1,0 +1,8 @@
+allow mediaserver persist_drm_file:dir search;
+allow mediaserver persist_drm_file:file rw_file_perms;
+
+allow mediaserver firmware_file:dir search;
+allow mediaserver firmware_file:file rx_file_perms;
+
+allow mediaserver vendor_file:dir search;
+allow mediaserver vendor_file:file { execmod };
