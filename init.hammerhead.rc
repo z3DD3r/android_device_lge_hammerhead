@@ -134,7 +134,7 @@ on boot
 
 on post-fs-data
     # NFC: create data/nfc for nv storage
-    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/nfc 0770 nfc nfc encryption=Require
     mkdir /data/nfc/param 0770 nfc nfc
 
     # wifi (persist)
@@ -156,9 +156,8 @@ on post-fs-data
     mkdir /data/misc/audio 0770 audio audio
 
     # Create directory used by sensor subsystem
-    mkdir /data/system 0755 system system
-    mkdir /data/system/sensors
-    chmod 755 /data/system/sensors
+    mkdir /data/system 0755 system system encryption=Require
+    mkdir /data/system/sensors 0755 root root
 
     # AKM setting data
     mkdir /data/misc/sensors
