@@ -286,6 +286,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
+# AptX
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/aptx/lib/libaptX_encoder.so:system/vendor/lib/libaptX_encoder.so \
+    device/lge/hammerhead/aptx/lib/libaptXHD_encoder.so:system/vendor/lib/libaptXHD_encoder.so \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bt.enableAptXHD=true \
+    persist.service.btui.use_aptx=1 \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
 # Set sensor streaming rate
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.max_geomag_rotv=60 \
