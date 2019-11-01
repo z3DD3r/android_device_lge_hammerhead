@@ -204,12 +204,6 @@
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
-    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
-    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has background scan support -->
-    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
-
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
          rather than the uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
@@ -244,9 +238,6 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>10</item>
     </integer-array>
-
-    <!-- Wifi driver supports batched scan -->
-    <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
 
     <!-- MMS user agent string -->
     <string name="config_mms_user_agent" translatable="false">Nexus5</string>
