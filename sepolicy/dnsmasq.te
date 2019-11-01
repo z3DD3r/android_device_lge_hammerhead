@@ -1,0 +1,7 @@
+allow dnsmasq netd:fifo_file getattr;
+allow dnsmasq netd:netlink_kobject_uevent_socket getattr;
+allow dnsmasq netd:netlink_nflog_socket getattr;
+allow dnsmasq netd:netlink_route_socket getattr;
+allow dnsmasq netd:unix_stream_socket getattr;
+allow dnsmasq netd:unix_dgram_socket getattr;
+allow dnsmasq netd:udp_socket getattr;
