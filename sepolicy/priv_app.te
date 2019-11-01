@@ -1,1 +1,10 @@
 allowxperm priv_app self:udp_socket ioctl { SIOCGIWESSID };
+
+allow priv_app device:dir r_dir_perms;
+allow priv_app proc_interrupts:file r_file_perms;
+allow priv_app sysfs_android_usb:file r_file_perms;
+allow priv_app sysfs_mac_address:file r_file_perms;
+allow priv_app sysfs:dir r_dir_perms;
+
+allow priv_app adb_data_file:dir r_dir_perms;
+allow priv_app adb_data_file:file r_file_perms;
