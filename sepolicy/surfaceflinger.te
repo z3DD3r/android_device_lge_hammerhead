@@ -1,3 +1,8 @@
 allow surfaceflinger qdisplay_service:service_manager { add find };
+allow surfaceflinger sysfs_surfaceflinger:dir r_dir_perms;
 allow surfaceflinger sysfs_surfaceflinger:file rw_file_perms;
 allow surfaceflinger sysfs_thermal:file r_file_perms;
+
+# This will not do any harm but perhaps not necessary cos sysfs_surfaceflinger labeled as regex
+allow surfaceflinger sysfs:dir r_dir_perms;
+allow surfaceflinger sysfs:file r_file_perms;
