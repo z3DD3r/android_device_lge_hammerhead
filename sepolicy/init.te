@@ -1,2 +1,9 @@
 allow init tmpfs:lnk_file create_file_perms;
 allow init sysfs_usb_storage_gadget:file { setattr };
+allow init sysfs:file { setattr w_file_perms };
+allow init sysfs_surfaceflinger:file { setattr w_file_perms };
+allow init sysfs_mpdecision:file { setattr w_file_perms };
+allow init sysfs_devices_system_cpu:file { setattr w_file_perms };
+allow init sysfs_bluetooth_writable:file { setattr };
+allow init sysfs_wlan_fwpath:file { setattr };
+allow init system_file:dir { relabelfrom relabelto };
