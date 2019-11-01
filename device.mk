@@ -119,6 +119,8 @@ DEVICE_PACKAGE_OVERLAYS := \
     device/lge/hammerhead/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    device/lge/hammerhead/overlay/lineage-sdk
 
 PRODUCT_PACKAGES := \
     android.hardware.wifi@1.0-service.legacy \
