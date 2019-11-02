@@ -2,6 +2,9 @@
 /dev/kgsl-3d0       u:object_r:gpu_device:s0
 /dev/kgsl           u:object_r:gpu_device:s0
 
+# rfkilll
+/dev/rfkill         u:object_r:rfkill_device:s0
+
 # Bluetooth
 /dev/ttyHS99        u:object_r:hci_attach_dev:s0
 

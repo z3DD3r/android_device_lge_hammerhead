@@ -1,3 +1,5 @@
+type rfkill_device, dev_type;
+
 type wlan_device, dev_type;
 
 type ramdump_device, dev_type;
