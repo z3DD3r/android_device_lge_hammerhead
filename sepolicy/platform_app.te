@@ -1,3 +1,5 @@
 allow platform_app time:unix_stream_socket connectto;
-
 allow platform_app nfc_service:service_manager find;
+
+allow platform_app adb_data_file:dir r_dir_perms;
+allow platform_app adb_data_file:file r_file_perms;
