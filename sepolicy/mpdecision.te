@@ -54,3 +54,4 @@ allow mpdecision system_data_file:dir rw_dir_perms;
 allow mpdecision system_data_file:file r_file_perms;
 
 r_dir_file(mpdecision, hal_camera_default)
+r_dir_file(mpdecision, cameraserver)
