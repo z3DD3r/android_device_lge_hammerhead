@@ -1,0 +1,20 @@
+allow hal_gnss_default vndbinder_device:chr_file { ioctl open read write map };
+
+allow hal_gnss_default sysfs:dir r_dir_perms;
+allow hal_gnss_default sysfs:file r_file_perms;
+
+allow hal_gnss_default sysfs_soc:dir r_dir_perms;
+allow hal_gnss_default sysfs_soc:file r_file_perms;
+
+allowxperm hal_gnss_default self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm hal_gnss_default self:udp_socket ioctl priv_sock_ioctls;
+
+allow hal_gnss_default self:socket create_socket_perms;
+allow hal_gnss_default self:netlink_socket create_socket_perms_no_ioctl;
+
+allow hal_gnss_default location_data_file:dir create_dir_perms;
+allow hal_gnss_default location_data_file:file create_file_perms;
+allow hal_gnss_default location_data_file:fifo_file create_file_perms;
+
+# Talk to qmuxd (qmux_radio)
+qmux_socket(hal_gnss_default)
