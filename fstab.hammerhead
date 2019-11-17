@@ -21,3 +21,4 @@
 /dev/block/platform/msm_sdcc.1/by-name/aboot        /aboot          emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/imgdata      /imgdata        emmc    defaults                                                        defaults
 /devices/platform/xhci-hcd/usb*                     auto            auto    defaults                                                        voldmanaged=usb:auto
+/dev/block/zram0                                    none            swap    defaults                                                        zramsize=536870912,max_comp_streams=4,notrim
