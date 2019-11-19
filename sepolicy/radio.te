@@ -2,7 +2,7 @@
 allow radio system_file:file execmod;
 allow radio vendor_file:file execmod;
 
-allow radio system_app_data_file:dir search;
+allow radio system_app_data_file:dir { search getattr };
 
 # Grant access to qmux socket that is created by rild
 type rild_qmuxd_socket, file_type;
