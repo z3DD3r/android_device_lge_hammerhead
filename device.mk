@@ -119,7 +119,9 @@ DEVICE_PACKAGE_OVERLAYS := \
     device/lge/hammerhead/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/lineage-sdk
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay/lineage-sdk \
+    $(LOCAL_PATH)/overlay/packages/apps/Snap
 
 PRODUCT_PACKAGES := \
     android.hardware.wifi@1.0-service.legacy \
