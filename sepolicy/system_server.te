@@ -27,3 +27,5 @@ allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D }
 
 allow system_server self:socket ioctl;
 allow system_server self:socket create_socket_perms;
+
+allow system_server proc_last_kmsg:file r_file_perms;
