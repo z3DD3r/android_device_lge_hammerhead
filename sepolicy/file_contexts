@@ -87,6 +87,9 @@
 /persist/widevine(/.*)?           u:object_r:persist_drm_file:s0
 /persist/wifi(/.*)?               u:object_r:persist_wifi_file:s0
 
+# Firmare
+/firmware(/.*)?                   u:object_r:firmware_file:s0
+
 # Sysfs entry for the RmNet function driver
 /sys/class/android_usb/f_rmnet_smd_sdio/transport  --  u:object_r:sysfs_rmnet:s0
 /sys/devices/virtual/android_usb/android0/f_rmnet_smd_sdio/transport  --  u:object_r:sysfs_rmnet:s0
