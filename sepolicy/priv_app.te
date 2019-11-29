@@ -1,2 +1,5 @@
 allowxperm priv_app self:udp_socket ioctl { SIOCGIWESSID };
 allow priv_app sysfs_graphics:file { read };
+
+dontaudit priv_app device:dir { getattr open };
+dontaudit priv_app proc_interrupts:file { getattr open };
