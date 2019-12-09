@@ -52,9 +52,6 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_BT_CONFIG := device/lge/hammerhead/bluetooth/vnd_hammerhead.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth
 
-# Encryption
-TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := device/lge/hammerhead/config.fs
 
