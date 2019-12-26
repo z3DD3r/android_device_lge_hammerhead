@@ -18,6 +18,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_hammerhead.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_hammerhead-user \
-    lineage_hammerhead-userdebug \
-    lineage_hammerhead-eng
+    aosp_hammerhead-user \
+    aosp_hammerhead-userdebug \
+    aosp_hammerhead-eng
