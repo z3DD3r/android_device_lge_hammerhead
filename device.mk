@@ -458,7 +458,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8x74/msm8x74-gpu-vendor.mk)
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
+$(call inherit-product-if-exists, device/lge/hammerhead/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
