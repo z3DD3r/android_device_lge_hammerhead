@@ -120,7 +120,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 
 # QCOM selinux policies
-include device/qcom/sepolicy-legacy/sepolicy.mk
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += device/lge/hammerhead/sepolicy
 BOARD_SEPOLICY_M4DEFS += vensys=\(vendor\|system/vendor\)
