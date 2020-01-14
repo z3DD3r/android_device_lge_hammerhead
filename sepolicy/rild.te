@@ -1,2 +1,6 @@
-r_dir_file(rild, radio_data_file)
+allow rild radio_data_file:lnk_file { getattr read };
+allow rild radio_data_file:dir create_dir_perms;
+allow rild radio_data_file:file create_file_perms;
+allow rild vendor_configs_file:file { ioctl lock };
+
 allowxperm rild self:udp_socket ioctl priv_sock_ioctls;
