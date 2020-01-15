@@ -54,7 +54,6 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 etc/flp.conf
 etc/permissions/qcrilhook.xml
 etc/permissions/serviceitems.xml
-etc/qcril.db
 etc/sensor_def_hh.conf
 framework/qcrilhook.jar
 framework/serviceitems.jar
@@ -88,6 +87,7 @@ lib/libssd.so
 lib/libstagefright_hdcp.so
 lib/libxml.so
 vendor/bin/vss_init
+vendor/etc/qcril.db
 vendor/firmware/a330_pfp.fw
 vendor/firmware/a330_pm4.fw
 vendor/firmware/adsp.b00
