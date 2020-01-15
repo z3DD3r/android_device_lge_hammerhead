@@ -1,0 +1,1 @@
+allow gpuservice opengles_prop:file { r_file_perms };
