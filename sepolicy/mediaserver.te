@@ -1,3 +1,10 @@
+add_service(mediaserver, cameraserver_service)
+add_hwservice(mediaserver, fwk_camera_hwservice)
+
+allow mediaserver sensor_privacy_service:service_manager find;
+allow mediaserver cameraproxy_service:service_manager find;
+allow mediaserver hal_camera_hwservice:hwservice_manager find;
+
 allow mediaserver persist_drm_file:dir search;
 allow mediaserver persist_drm_file:file rw_file_perms;
 
