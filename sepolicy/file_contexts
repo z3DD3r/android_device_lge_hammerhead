@@ -57,6 +57,10 @@
 /dev/msm_amrwb.*                   u:object_r:audio_device:s0
 /dev/msm_aac.*                     u:object_r:audio_device:s0
 
+# cgroup
+/dev/cpuset(/.*)?                  u:object_r:cgroup:s0
+/dev/stune(/.*)?                   u:object_r:cgroup:s0
+
 # Sensors shared Memory Packet Interface
 /dev/smd_sns_dsps                      u:object_r:sensors_device:s0
 
