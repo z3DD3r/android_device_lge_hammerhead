@@ -121,6 +121,9 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/lge/hammerhead/sepolicy
 BOARD_SEPOLICY_M4DEFS += vensys=\(vendor\|system/vendor\)
 
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/lge/hammerhead/sepolicy/private
+
 DEVICE_MANIFEST_FILE := device/lge/hammerhead/manifest.xml
 DEVICE_MATRIX_FILE := device/lge/hammerhead/compatibility_matrix.xml
 
