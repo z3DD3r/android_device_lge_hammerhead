@@ -1,0 +1,5 @@
+allow dexoptanalyzer apk_data_file:dir { r_dir_perms };
+allow dexoptanalyzer apk_data_file:file { r_file_perms };
+
+allow dexoptanalyzer system_file:dir { r_dir_perms };
+allow dexoptanalyzer system_file:file { r_file_perms };
