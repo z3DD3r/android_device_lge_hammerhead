@@ -32,7 +32,7 @@
 
 #include <errno.h>
 #include <math.h>
-
+#include <stdlib.h>
 
 #define LOWER(a)               ((a) & 0xFFFF)
 #define UPPER(a)               (((a)>>16) & 0xFFFF)
