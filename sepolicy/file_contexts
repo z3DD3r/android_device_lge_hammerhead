@@ -16,6 +16,9 @@
 # Image Rotator Driver
 /dev/msm_rotator    u:object_r:video_device:s0
 
+# Light HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.hh    u:object_r:hal_light_default_exec:s0
+
 # Vibrator HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.1-service\.hh  u:object_r:hal_vibrator_default_exec:s0
 
@@ -134,11 +137,10 @@
 /sys/devices/battery_tm_ctrl.78/power_supply/batt_therm(/.*)?        u:object_r:sysfs_batteryinfo:s0
 /sys/devices/bq51013b_wlc.77/power_supply/wireless(/.*)?             u:object_r:sysfs_batteryinfo:s0
 
-# sysfs - graphics
-/sys/devices/mdp\.0/qcom,mdss_fb_primary.160/leds/lcd-backlight/brightness u:object_r:sysfs_graphics:s0
-/sys/devices/leds-qpnp-23/leds/(red|green|blue)/brightness                 u:object_r:sysfs_graphics:s0
-/sys/devices/leds-qpnp-23/leds/(red|green|blue)/on_off_ms                  u:object_r:sysfs_graphics:s0
-/sys/devices/leds-qpnp-23/leds/(red|green|blue)/rgb_start                  u:object_r:sysfs_graphics:s0
+# sysfs - leds
+/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds(/.*)?                             u:object_r:sysfs_leds:s0
+/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds/lcd-backlight/brightness          u:object_r:sysfs_leds:s0
+/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds/lcd-backlight/max_brightness      u:object_r:sysfs_leds:s0
 
 # sysfs - sysfs_power_management
 /sys/devices/(fe20|fc88|fdce)0000\.qcom,(lpass|mss|venus)/subsys[0-2]/restart_level u:object_r:sysfs_power_management:s0
