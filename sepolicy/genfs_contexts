@@ -1,2 +1,8 @@
 genfscon proc /bluetooth/sleep/lpm     u:object_r:proc_bluetooth_writable:s0
 genfscon proc /bluetooth/sleep/btwrite u:object_r:proc_bluetooth_writable:s0
+
+# genfscon sysfs /devices/virtual/timed_output/vibrator/enable u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_default u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_max u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_min u:object_r:sysfs_vibrator:s0

@@ -1,0 +1,16 @@
+on early-boot
+    chown system system /sys/class/timed_output/vibrator/vtg_default
+    chown system system /sys/class/timed_output/vibrator/vtg_level
+    chown system system /sys/class/timed_output/vibrator/vtg_max
+    chown system system /sys/class/timed_output/vibrator/vtg_min
+    chown system system /sys/class/timed_output/vibrator/enable
+    chmod 0440 /sys/class/timed_output/vibrator/vtg_default
+    chmod 0660 /sys/class/timed_output/vibrator/vtg_level
+    chmod 0440 /sys/class/timed_output/vibrator/vtg_max
+    chmod 0440 /sys/class/timed_output/vibrator/vtg_min
+    chmod 0660 /sys/class/timed_output/vibrator/enable
+
+service vendor.vibrator-1-1 /vendor/bin/hw/android.hardware.vibrator@1.1-service.hh
+    class hal
+    user system
+    group system
