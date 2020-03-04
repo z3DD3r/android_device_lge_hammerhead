@@ -1,0 +1,7 @@
+###
+
+allow hal_allocator_default dumpstate:fd { use };
+allow hal_allocator_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow system_suspend dumpstate:fd { use };
+allow system_suspend dumpstate:fifo_file { setattr rw_file_perms };
