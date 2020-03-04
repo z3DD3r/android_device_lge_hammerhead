@@ -16,6 +16,9 @@
 # Image Rotator Driver
 /dev/msm_rotator    u:object_r:video_device:s0
 
+# Dumpstate HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.0-service\.hh      u:object_r:hal_dumpstate_default_exec:s0
+
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.hh    u:object_r:hal_light_default_exec:s0
 
