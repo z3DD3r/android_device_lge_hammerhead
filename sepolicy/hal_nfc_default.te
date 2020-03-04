@@ -1,2 +1,6 @@
 allow hal_nfc_default nfc_data_file:file create_file_perms;
 allow hal_nfc_default nfc_data_file:dir w_dir_perms;
+
+# Needed for dumpstate
+allow hal_nfc_default dumpstate:fd { use };
+allow hal_nfc_default dumpstate:fifo_file { getattr setattr open read write };

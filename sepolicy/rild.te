@@ -4,3 +4,7 @@ allow rild radio_data_file:file create_file_perms;
 allow rild vendor_configs_file:file { ioctl lock };
 
 allowxperm rild self:udp_socket ioctl priv_sock_ioctls;
+
+# Needed for dumpstate
+allow rild dumpstate:fd { use };
+allow rild dumpstate:fifo_file { getattr setattr open read write };
