@@ -1,0 +1,2 @@
+allow adbd oemfs:dir r_dir_perms;
+set_prop(adbd, ctl_start_prop)
