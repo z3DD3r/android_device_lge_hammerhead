@@ -33,6 +33,7 @@ on fs
     restorecon_recursive /persist
     setprop persist.adb.nonblocking_ffs 0
     setprop ro.adb.nonblocking_ffs 0
+    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
