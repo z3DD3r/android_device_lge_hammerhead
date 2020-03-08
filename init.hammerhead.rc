@@ -28,7 +28,13 @@ on init
 on fs
     mount_all /vendor/etc/fstab.hammerhead
     swapon_all /vendor/etc/fstab.hammerhead
-    restorecon_recursive /persist
+
+    # These directories have different labeling in stock rom.
+    # Jumping between stock and LineageOS needs restorecon -F
+    # to apply our labeling.
+    exec u:r:vendor_init:s0 root root -- /vendor/bin/toybox_vendor \
+      restorecon -RF /persist
+
     setprop persist.adb.nonblocking_ffs 0
     setprop ro.adb.nonblocking_ffs 0
     mount none /vendor/etc/gps.conf /system/etc/gps_debug.conf bind
