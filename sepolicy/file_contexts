@@ -16,6 +16,9 @@
 # Image Rotator Driver
 /dev/msm_rotator    u:object_r:video_device:s0
 
+# DRM clearkey
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey    u:object_r:hal_drm_clearkey_exec:s0
+
 # Dumpstate HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.0-service\.hh      u:object_r:hal_dumpstate_default_exec:s0
 
@@ -77,6 +80,7 @@
 /data/misc/playready(/.*)?         u:object_r:drm_data_file:s0
 /data/system/time(/.*)?            u:object_r:time_data_file:s0
 /data/tombstones/ramdump(/.*)?     u:object_r:ssr_ramdump_data_file:s0
+/data/vendor/mediadrm(/.*)?        u:object_r:mediadrm_vendor_data_file:s0
 
 # rmt_storage is a qualcomm specific daemon responsible
 # for servicing modem filesystem requests.
