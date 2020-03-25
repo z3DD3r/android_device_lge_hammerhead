@@ -1,3 +1,5 @@
+type mediadrm_vendor_data_file,  file_type, data_file_type;
+
 # Persist firmware types
 type persist_camera_file, file_type;
 type persist_wifi_file, file_type;
