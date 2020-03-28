@@ -278,7 +278,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_gl_backpressure=1
+    debug.sf.disable_backpressure=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1
