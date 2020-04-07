@@ -22,4 +22,5 @@ LOCAL_SRC_FILES := power_hammerhead.c
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := power.hammerhead
+LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
