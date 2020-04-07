@@ -22,7 +22,6 @@
 #include <fcntl.h>
 #include <dlfcn.h>
 #include <cutils/uevent.h>
-#include <errno.h>
 #include <sys/poll.h>
 #include <pthread.h>
 #include <linux/netlink.h>
@@ -118,6 +117,9 @@ static int uevent_event()
 
     n = recv(pfd.fd, msg, UEVENT_MSG_LEN, MSG_DONTWAIT);
     if (n <= 0) {
+        if (errno == EAGAIN || errno == EWOULDBLOCK) {
+            return 0;
+        }
         return -1;
     }
     if (n >= UEVENT_MSG_LEN) {   /* overflow -- discard */
