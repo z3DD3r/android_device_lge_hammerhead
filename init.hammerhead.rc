@@ -351,7 +351,7 @@ service ssr_ramdump /system/bin/subsystem_ramdump -m -t emmc
     group root system
     disabled
 
-service thermal-engine /system/bin/thermal-engine-hh
+service thermal-engine /vendor/bin/thermal-engine
    class main
    user root
    group radio system

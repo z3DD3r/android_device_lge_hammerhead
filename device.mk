@@ -106,7 +106,7 @@ PRODUCT_COPY_FILES += \
     device/lge/hammerhead/nfc/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf
 
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
+    device/lge/hammerhead/thermal-engine-8974.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8974.conf
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
