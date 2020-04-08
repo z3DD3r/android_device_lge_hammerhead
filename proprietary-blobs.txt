@@ -36,7 +36,6 @@ bin/radish
 bin/rmt_storage
 bin/sensors.qcom
 bin/subsystem_ramdump
-bin/thermal-engine-hh
 bin/time_daemon|e5fe186973b90715ab9a045d4dcd63d0134e2e63
 bin/usbhub
 bin/usbhub_init
@@ -86,6 +85,7 @@ lib/librpmb.so
 lib/libssd.so
 lib/libstagefright_hdcp.so
 lib/libxml.so
+vendor/bin/thermal-engine
 vendor/bin/vss_init
 vendor/etc/qcril.db
 vendor/firmware/a330_pfp.fw
