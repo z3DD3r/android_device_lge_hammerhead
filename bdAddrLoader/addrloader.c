@@ -22,6 +22,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <getopt.h>
+#include <string.h>
 
 #define LOG_TAG "bdAddrLoader"
 
@@ -122,10 +123,6 @@ void formattingBdAddr(char *szBDAddr, const char cSep)
 
 int readBDAddr(InArg inArg, LoadedBDAddr *loadedBDAddr)
 {
-    Res res = FAIL;
-    unsigned char addrData[BD_ADDR_LEN] = {0,};
-    int nDataLen = 0;
-
     ALOGI("Read From %s by Path type(0x%2x), Data type (0x%2x)",
             inArg.szSrc, inArg.nPathType, inArg.nDataType);
 
@@ -218,9 +215,7 @@ int writeBDAddr(OutArg outArg, LoadedBDAddr *loadedBDAddr)
 
 int main(int argc, char *argv[])
 {
-    int nFd, nRdCnt;
     int c;
-
     InArg inArg;
     OutArg outArg;
     LoadedBDAddr loadedBDAddr;
