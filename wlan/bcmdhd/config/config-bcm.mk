@@ -1,4 +1,5 @@
-# Copyright 2013 The Android Open Source Project
+#
+# Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,12 +12,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
--include device/lge/hammerhead/wlan/bcmdhd/config/config-bcm.mk
-
-BCM_FW_SRC_FILE_STA := fw_bcmdhd.bin
-BCM_FW_SRC_FILE_AP  := fw_bcmdhd_apsta.bin
-
+########################
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/wlan/bcmdhd/firmware/bcm4339/$(BCM_FW_SRC_FILE_STA):$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd.bin \
-    device/lge/hammerhead/wlan/bcmdhd/firmware/bcm4339/$(BCM_FW_SRC_FILE_AP):$(TARGET_COPY_OUT_VENDOR)/firmware/fw_bcmdhd_apsta.bin
+    device/lge/hammerhead/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    device/lge/hammerhead/wlan/bcmdhd/config/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
+########################
