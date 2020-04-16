@@ -142,4 +142,8 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 SELINUX_IGNORE_NEVERALLOWS := true
 endif
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libril-qc-qmi-1.so|libshim_ril.so
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
