@@ -150,6 +150,7 @@ endif
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/vendor/bin/mpdecision|libshim_atomic.so \
     /system/lib/libril-qc-qmi-1.so|libshim_ril.so
 
 -include vendor/lge/hammerhead/BoardConfigVendor.mk

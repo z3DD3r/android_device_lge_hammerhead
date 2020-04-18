@@ -301,6 +301,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_atomic
+
 # RIL shims
 PRODUCT_PACKAGES += \
     libshim_ril
