@@ -33,7 +33,6 @@
 
 # MPdecision
 /dev/socket/mpctl                      u:object_r:mpctl_socket:s0
-/dev/socket/mpdecision(/.*)?           u:object_r:mpctl_socket:s0
 
 ## Radio related
 # modem driver

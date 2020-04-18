@@ -153,9 +153,6 @@ on post-fs-data
     write /persist/sensors/sensors_settings 1
     chmod 660 /persist/sensors/sensors_settings
 
-    # communicate with mpdecision and thermald
-    mkdir /dev/socket/mpdecision 2770 root system
-
     # save rtc time offsets
     mkdir /data/system/time 0700 system system
 
@@ -194,7 +191,6 @@ on post-fs-data
     chmod 664 /sys/devices/system/cpu/cpu1/online
     chmod 664 /sys/devices/system/cpu/cpu2/online
     chmod 664 /sys/devices/system/cpu/cpu3/online
-    write /dev/cpuctl/cpu.notify_on_migrate 1
 
 on charger
     # Enable Power modes and set the CPU Freq Sampling rates
@@ -339,8 +335,8 @@ service bugreport /system/bin/dumpstate -d -p -B \
     oneshot
     keycodes 114 115 116
 
-service mpdecision /system/bin/mpdecision --avg_comp --Nw=1:1.99 --Nw=2:2.99 --Nw=3:3.99 --Tw=2:140 --Tw=3:140 --Ts=2:190 --Ts=3:190
-   class main
+service mpdecision /vendor/bin/mpdecision --avg_comp
+   class late_start
    user root
    group root system readproc
    disabled
