@@ -26,7 +26,6 @@ bin/diag_mdlog
 bin/ds_fmc_appd
 bin/irsc_util
 bin/mm-qcamera-daemon
-bin/mpdecision
 bin/netmgrd
 bin/nl_listener
 bin/port-bridge
@@ -85,6 +84,7 @@ lib/librpmb.so
 lib/libssd.so
 lib/libstagefright_hdcp.so
 lib/libxml.so
+vendor/bin/mpdecision
 vendor/bin/thermal-engine
 vendor/bin/vss_init
 vendor/etc/qcril.db
