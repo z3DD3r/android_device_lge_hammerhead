@@ -270,9 +270,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bdAddrLoader
 
+# Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    power.hammerhead
+    android.hardware.power@1.2-service.hh
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
