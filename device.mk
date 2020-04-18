@@ -301,6 +301,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_atomic \
     libshim_ril
 
 # AptX
