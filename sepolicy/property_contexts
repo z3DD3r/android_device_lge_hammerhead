@@ -1,0 +1,2 @@
+# Timekeep
+persist.vendor.timeadjust   u:object_r:vendor_timekeep_prop:s0
