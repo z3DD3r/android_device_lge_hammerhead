@@ -81,7 +81,6 @@
 
 /data/cam_socket[0-9]              u:object_r:camera_socket:s0
 /data/misc/playready(/.*)?         u:object_r:drm_data_file:s0
-/data/system/time(/.*)?            u:object_r:time_data_file:s0
 /data/tombstones/ramdump(/.*)?     u:object_r:ssr_ramdump_data_file:s0
 /data/vendor/mediadrm(/.*)?        u:object_r:mediadrm_vendor_data_file:s0
 
@@ -97,7 +96,6 @@
 /system/bin/qseecomd               u:object_r:tee_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:subsystem_ramdump_exec:s0
 /system/vendor/bin/vss_init        u:object_r:vss_exec:s0
-/system/bin/time_daemon            u:object_r:time_daemon_exec:s0
 /system/bin/irsc_util              u:object_r:irsc_util_exec:s0
 
 # Persist firmware filesystem
@@ -150,6 +148,10 @@
 /sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds(/.*)?                             u:object_r:sysfs_leds:s0
 /sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds/lcd-backlight/brightness          u:object_r:sysfs_leds:s0
 /sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds/lcd-backlight/max_brightness      u:object_r:sysfs_leds:s0
+
+# TimeKeep
+/sys/devices/qpnp-rtc-[0-9]+/rtc/rtc0(/.*)?         u:object_r:sysfs_rtc:s0
+/(system/vendor|vendor)/bin/timekeep                u:object_r:timekeep_exec:s0
 
 # sysfs - sysfs_power_management
 /sys/devices/(fe20|fc88|fdce)0000\.qcom,(lpass|mss|venus)/subsys[0-2]/restart_level u:object_r:sysfs_power_management:s0
