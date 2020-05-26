@@ -16,7 +16,6 @@
 
 -app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/shutdownlistener/shutdownlistener.apk
--app/TimeService/TimeService.apk
 -app/UpdateSetting/UpdateSetting.apk
 -priv-app/OmaDmclient/OmaDmclient.apk
 -priv-app/SprintHiddenMenu/SprintHiddenMenu.apk
@@ -35,7 +34,6 @@ bin/radish
 bin/rmt_storage
 bin/sensors.qcom
 bin/subsystem_ramdump
-bin/time_daemon|e5fe186973b90715ab9a045d4dcd63d0134e2e63
 bin/usbhub
 bin/usbhub_init
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -216,7 +214,6 @@ vendor/lib/libsensor1.so
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 vendor/lib/libtime_genoff.so
-vendor/lib/libTimeService.so
 vendor/lib/libvdmengine.so
 vendor/lib/libvdmfumo.so
 vendor/lib/libvss_common_core.so

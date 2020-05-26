@@ -153,9 +153,6 @@ on post-fs-data
     write /persist/sensors/sensors_settings 1
     chmod 660 /persist/sensors/sensors_settings
 
-    # save rtc time offsets
-    mkdir /data/system/time 0700 system system
-
     # Ecc_Handler qcril.db
     mkdir /data/misc/radio 0770 radio radio
     symlink /vendor/etc/qcril.db /data/misc/radio/qcril.db
@@ -357,12 +354,6 @@ service vss_init /vendor/bin/vss_init
     user root
     group root
     disabled
-
-service time_daemon /system/bin/time_daemon
-    capabilities SYS_TIME
-    class late_start
-    user system
-    group net_raw
 
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
