@@ -238,6 +238,11 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     gps.msm8974
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # NFC packages
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl-bcm \
