@@ -162,4 +162,7 @@ TARGET_LD_SHIM_LIBS := \
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
