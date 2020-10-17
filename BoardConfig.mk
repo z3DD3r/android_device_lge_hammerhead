@@ -155,6 +155,9 @@ TARGET_LD_SHIM_LIBS := \
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Tweaks for 'low ram' devices
 -include device/lge/hammerhead/lowram/BoardConfig.mk
 
