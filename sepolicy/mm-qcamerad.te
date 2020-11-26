@@ -6,8 +6,8 @@ allow mm-qcamerad { hal_camera_default mediacodec }:fd use;
 allow mm-qcamerad { untrusted_app_all priv_app }:fd use;
 
 # Create front and back camera sockets (/data/cam_socket[12])
-allow mm-qcamerad system_data_file:dir w_dir_perms;
-allow mm-qcamerad system_data_file:sock_file unlink;
+allow mm-qcamerad system_data_root_file:dir w_dir_perms;
+allow mm-qcamerad system_data_root_file:sock_file { create unlink };
 
 # Connect to sensor socket (/data/app/sensor_ctl_socket)
 allow mm-qcamerad apk_data_file:dir r_dir_perms;

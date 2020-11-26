@@ -13,3 +13,5 @@ allow mediaserver firmware_file:file rx_file_perms;
 
 allow mediaserver vendor_file:dir search;
 allow mediaserver vendor_file:file { execmod };
+
+allow mediaserver system_data_root_file:sock_file write;
