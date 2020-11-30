@@ -86,5 +86,6 @@ LOCAL_MODULE := android.hardware.power@1.2-service.hh
 LOCAL_INIT_RC := android.hardware.power@1.2-service.hh.rc
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
+LOCAL_VINTF_FRAGMENTS := android.hardware.power@1.2-service.hh.xml
 
 include $(BUILD_EXECUTABLE)
