@@ -23,3 +23,4 @@ PRODUCT_DISABLE_SCUDO := true
 
 # Do not spin up a separate process for the network stack on go devices, use an in-process APK.
 PRODUCT_PACKAGES += InProcessNetworkStack
+PRODUCT_PACKAGES += com.android.tethering.inprocess
