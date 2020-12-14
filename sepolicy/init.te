@@ -1,6 +1,7 @@
 allow init debugfs:file write;
 allow init proc_bluetooth_writable:file { setattr };
 allow init proc_modules:file { r_file_perms };
+allow init proc_last_kmsg:file { r_file_perms setattr };
 allow init sysfs_android_usb:file { setattr };
 allow init sysfs_devices_system_cpu:file { write };
 allow init sysfs_bluetooth_writable:file { setattr };
