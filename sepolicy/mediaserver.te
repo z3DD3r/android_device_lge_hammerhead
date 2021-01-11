@@ -15,3 +15,7 @@ allow mediaserver vendor_file:dir search;
 allow mediaserver vendor_file:file { execmod };
 
 allow mediaserver system_data_root_file:sock_file write;
+allow mediaserver system_data_root_file:sock_file read;
+
+get_prop(mediaserver, exported_audio_prop);
+get_prop(mediaserver, exported_camera_prop);
