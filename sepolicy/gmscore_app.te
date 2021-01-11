@@ -1,0 +1,17 @@
+allow gmscore_app hal_memtrack_hwservice:hwservice_manager find;
+binder_call(gmscore_app, hal_memtrack_default);
+
+get_prop(gmscore_app, adbd_prop);
+get_prop(gmscore_app, alarm_boot_prop);
+get_prop(gmscore_app, alarm_handled_prop);
+get_prop(gmscore_app, alarm_instance_prop);
+get_prop(gmscore_app, apexd_prop);
+get_prop(gmscore_app, apk_verity_prop);
+get_prop(gmscore_app, bg_boot_complete_prop);
+get_prop(gmscore_app, bg_daemon_prop);
+get_prop(gmscore_app, bluetooth_a2dp_offload_prop);
+get_prop(gmscore_app, bluetooth_audio_hal_prop);
+get_prop(gmscore_app, boot_animation_prop);
+get_prop(gmscore_app, boot_mode_prop);
+get_prop(gmscore_app, bootloader_boot_reason_prop);
+get_prop(gmscore_app, boottime_prop);
