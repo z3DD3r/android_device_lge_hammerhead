@@ -1,5 +1,6 @@
 allow incidentd nfc_service:service_manager find;
 allow incidentd proc_last_kmsg:file r_file_perms;
 
+get_prop(incidentd, adbd_prop);
 get_prop(incidentd, alarm_boot_prop);
 get_prop(incidentd, alarm_handled_prop);
