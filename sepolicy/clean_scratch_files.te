@@ -1,0 +1,4 @@
+type clean_scratch_files, domain;
+type clean_scratch_files_exec, exec_type, file_type;
+
+init_daemon_domain(clean_scratch_files)
