@@ -1,2 +1,4 @@
 allow platform_app time_daemon:unix_stream_socket connectto;
 allow platform_app nfc_service:service_manager find;
+
+get_prop(platform_app, exported_audio_prop);
