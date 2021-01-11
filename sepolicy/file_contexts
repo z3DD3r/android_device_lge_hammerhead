@@ -86,6 +86,9 @@
 /data/tombstones/ramdump(/.*)?     u:object_r:ssr_ramdump_data_file:s0
 /data/vendor/mediadrm(/.*)?        u:object_r:mediadrm_vendor_data_file:s0
 
+# AOSP clean_scratch_files tool executable
+/system/bin/clean_scratch_files    u:object_r:clean_scratch_files_exec:s0
+
 # Bluetooth MAC loader
 /(system/vendor|vendor)/bin/bdAddrLoader           u:object_r:bluetooth_loader_exec:s0
 
