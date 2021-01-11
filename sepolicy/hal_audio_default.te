@@ -1,0 +1,8 @@
+allow hal_audio_default self:socket create_socket_perms;
+
+allow hal_audio_default hal_power_hwservice:hwservice_manager find;
+binder_call(hal_audio_default, hal_power_default);
+
+allow hal_audio_default qmuxd_socket:dir w_dir_perms;
+allow hal_audio_default qmuxd_socket:sock_file create_file_perms;
+unix_socket_connect(hal_audio_default, qmuxd, qmuxd)
