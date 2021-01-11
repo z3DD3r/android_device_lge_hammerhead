@@ -1,1 +1,14 @@
 allow vold hal_bootctl_hwservice:hwservice_manager find;
+allow vold rootfs:dir setattr;
+
+allow vold fsck_exec:file execute_no_trans;
+allow vold proc_swaps:file r_file_perms;
+allow vold sysfs_mmc_host:file rw_file_perms;
+
+allow vold block_device:blk_file { getattr ioctl open read };
+allow vold cache_block_device:blk_file { getattr ioctl open read };
+allow vold dm_device:blk_file { getattr ioctl open read };
+allow vold metadata_block_device:blk_file { getattr ioctl open read };
+allow vold persist_block_device:blk_file { getattr ioctl open read };
+allow vold system_block_device:blk_file { getattr ioctl open read };
+allow vold userdata_block_device:blk_file { getattr ioctl open read };
