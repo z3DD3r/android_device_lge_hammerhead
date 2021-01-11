@@ -1,3 +1,13 @@
 allow crash_dump init:process { ptrace };
+allow crash_dump keystore:process { ptrace };
 allow crash_dump hwservicemanager_prop:file { r_file_perms };
 allow crash_dump rootfs:dir { r_dir_perms };
+
+get_prop(crash_dump, apk_verity_prop);
+get_prop(crash_dump, bluetooth_prop);
+get_prop(crash_dump, device_config_runtime_native_prop);
+get_prop(crash_dump, exported_camera_prop);
+get_prop(crash_dump, media_variant_prop);
+get_prop(crash_dump, userspace_reboot_config_prop);
+get_prop(crash_dump, userspace_reboot_exported_prop);
+get_prop(crash_dump, vendor_mpctl_prop);
