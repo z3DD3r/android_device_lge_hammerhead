@@ -1,0 +1,7 @@
+allow zygote self:capability sys_nice;
+allow zygote system_file:dir mounton;
+
+dontaudit zygote proc_cmdline:file r_file_perms;
+
+get_prop(zygote, bluetooth_prop);
+get_prop(zygote, exported_camera_prop);
