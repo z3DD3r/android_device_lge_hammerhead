@@ -7,6 +7,7 @@ allow system_app system_suspend_control_service:service_manager find;
 
 binder_call(system_app, apexd)
 binder_call(system_app, installd)
+binder_call(system_app, iorapd)
 binder_call(system_app, netd)
 binder_call(system_app, vold)
 binder_call(system_app, wificond)
