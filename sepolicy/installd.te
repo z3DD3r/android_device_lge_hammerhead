@@ -1,3 +1,4 @@
 allow installd adb_data_file:dir r_dir_perms;
 allow installd adb_data_file:file r_file_perms;
 allow installd media_rw_data_file:file { setattr };
+allow installd system_file:file { unlink };
