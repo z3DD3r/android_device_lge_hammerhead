@@ -197,9 +197,6 @@ vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libril-qcril-hook-oem.so
-vendor/lib/librs_adreno.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsensor_user_cal.so
