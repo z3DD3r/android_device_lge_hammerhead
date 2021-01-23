@@ -6,10 +6,10 @@ type persist_wifi_file, file_type;
 
 type proc_last_kmsg, fs_type, proc_type;
 
+type sysfs_fastcharge_switch, fs_type, sysfs_type;
 type sysfs_rmnet, fs_type, sysfs_type;
 type sysfs_surfaceflinger, fs_type, sysfs_type;
 type sysfs_power_management, fs_type, sysfs_type;
 type sysfs_ramdumps, fs_type, sysfs_type;
 
 type rfkill_device, dev_type;
-

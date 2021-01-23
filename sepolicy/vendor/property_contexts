@@ -1,2 +1,5 @@
 # Timekeep
 persist.vendor.timeadjust   u:object_r:vendor_timekeep_prop:s0
+
+# FastCharge
+persist.vendor.fastcharge.enabled     u:object_r:fastcharge_prop:s0
