@@ -1,0 +1,7 @@
+on early-boot
+    chown system system /sys/kernel/fast_charge/force_fast_charge
+
+service vendor.fastcharge-hal-1-0 /vendor/bin/hw/vendor.lineage.fastcharge@1.0-service.hh
+    class hal
+    user system
+    group system
