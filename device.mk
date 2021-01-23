@@ -325,6 +325,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
 
+# FastCharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.hh
+
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
