@@ -1,0 +1,1 @@
+allow hal_dumpstate_default dumpstate:fifo_file { rw_file_perms };
