@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/flp.conf:system/etc/flp.conf \
     device/lge/hammerhead/gps.conf:system/etc/gps.conf
 
 # GPS
