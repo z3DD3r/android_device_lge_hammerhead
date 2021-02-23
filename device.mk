@@ -230,8 +230,10 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/flp.conf:system/etc/flp.conf \
-    device/lge/hammerhead/gps.conf:system/etc/gps.conf
+    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf
 
 # GPS
 PRODUCT_PACKAGES += \
