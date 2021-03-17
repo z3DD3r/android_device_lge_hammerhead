@@ -37,6 +37,9 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
+    # adsp
+    write /sys/kernel/boot_adsp/boot 1
+
 on boot
     # bluetooth
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -119,8 +122,6 @@ on boot
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
 on post-fs-data
-    write /sys/kernel/boot_adsp/boot 1
-
     # Subsytem Ramdump collection
     mkdir /data/tombstones/ramdump 0777 system system
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
