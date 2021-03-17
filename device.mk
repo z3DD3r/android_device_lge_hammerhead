@@ -488,6 +488,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 
+# Subsystem ramdump
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ssr.enable_debug=0 \
+    persist.sys.ssr.enable_ramdumps=0
+
 # Device was launched with K
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 
