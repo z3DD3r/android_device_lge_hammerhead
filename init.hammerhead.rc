@@ -131,8 +131,17 @@ on post-fs-data
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
-    # wifi
+    # wifi (persist)
     chown wifi system /persist/wifi
+    chmod 0770 /persist/wifi
+    chown wifi system /persist/wifi/.macaddr
+    chmod 0660 /persist/wifi/.macaddr
+
+    # bluetooth (persist)
+    chown bluetooth system /persist/bluetooth
+    chmod 0770 /persist/bluetooth
+    chown bluetooth system /persist/bluetooth/.bdaddr
+    chmod 0660 /persist/bluetooth/.bdaddr
 
     #  bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
