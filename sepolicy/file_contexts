@@ -160,5 +160,6 @@
 /sys/module/slimport/parameters/enable_irq                                          u:object_r:sysfs_power_management:s0
 
 #sysfs - ramdumps
+/sys/module/subsystem_restart/parameters/enable_debug    u:object_r:sysfs_ramdumps:s0
 /sys/module/subsystem_restart/parameters/enable_ramdumps u:object_r:sysfs_ramdumps:s0
 /sys/module/msm_show_resume_irq/parameters/debug_mask    u:object_r:sysfs_ramdumps:s0
