@@ -1,1 +1,2 @@
 allow ueventd sysfs_smd_open_timeout:file setattr;
+allow ueventd self:capability sys_nice;
