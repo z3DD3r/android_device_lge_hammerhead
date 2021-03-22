@@ -1,5 +1,1 @@
 allow gpuservice opengles_prop:file { r_file_perms };
-
-# Needed for dumpstate
-allow gpuservice dumpstate:fd { use };
-allow gpuservice dumpstate:fifo_file { getattr setattr open read write };

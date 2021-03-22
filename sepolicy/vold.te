@@ -1,5 +1,1 @@
 allow vold hal_bootctl_hwservice:hwservice_manager find;
-
-# Needed for dumpstate
-allow vold dumpstate:fd { use };
-allow vold dumpstate:fifo_file { getattr setattr open read write };

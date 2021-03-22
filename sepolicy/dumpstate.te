@@ -8,5 +8,65 @@ allow dumpstate debugfs_mmc:dir r_dir_perms;
 allow dumpstate persist_file:dir r_dir_perms;
 allow dumpstate proc_last_kmsg:file r_file_perms;
 
+binder_call(dumpstate, hal_lineage_livedisplay_sysfs)
+binder_call(dumpstate, hal_lineage_trust_default)
+binder_call(dumpstate, hal_usb_default)
+binder_call(dumpstate, hal_wifi_supplicant_default)
 binder_call(dumpstate, rild)
 binder_call(dumpstate, vold)
+
+###
+
+allow gpuservice dumpstate:fd { use };
+allow gpuservice dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_bluetooth_default dumpstate:fd { use };
+allow hal_bluetooth_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_cas_default dumpstate:fd { use };
+allow hal_cas_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_drm_clearkey dumpstate:fd { use };
+allow hal_drm_clearkey dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_drm_default dumpstate:fd { use };
+allow hal_drm_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_dumpstate_default dumpstate:fd { use };
+allow hal_dumpstate_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_graphics_allocator_default dumpstate:fd { use };
+allow hal_graphics_allocator_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_keymaster_default dumpstate:fd { use };
+allow hal_keymaster_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_light_default dumpstate:fd { use };
+allow hal_light_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_lineage_livedisplay_sysfs dumpstate:fd { use };
+allow hal_lineage_livedisplay_sysfs dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_lineage_trust_default dumpstate:fd { use };
+allow hal_lineage_trust_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_memtrack_default dumpstate:fd { use };
+allow hal_memtrack_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_nfc_default dumpstate:fd { use };
+allow hal_nfc_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_vibrator_default dumpstate:fd { use };
+allow hal_vibrator_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hal_wifi_supplicant_default dumpstate:fd { use };
+allow hal_wifi_supplicant_default dumpstate:fifo_file { setattr rw_file_perms };
+
+allow hwservicemanager dumpstate:fd { use };
+allow hwservicemanager dumpstate:fifo_file { setattr rw_file_perms };
+
+allow rild dumpstate:fd { use };
+allow rild dumpstate:fifo_file { setattr rw_file_perms };
+
+allow vold dumpstate:fd { use };
+allow vold dumpstate:fifo_file { setattr rw_file_perms };

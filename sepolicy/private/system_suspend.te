@@ -1,3 +1,0 @@
-# Needed for dumpstate
-allow system_suspend dumpstate:fd { use };
-allow system_suspend dumpstate:fifo_file { getattr setattr open read write };
