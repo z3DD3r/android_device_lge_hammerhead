@@ -25,10 +25,9 @@ LOCAL_C_INCLUDES += \
 	$(call include-path-for, audio-effects)
 
 LOCAL_MODULE := libqcomvoiceprocessingdescriptors
-
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/soundfx
-
 LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_RELATIVE_PATH := soundfx
+LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 

@@ -71,8 +71,8 @@ LOCAL_SHARED_LIBRARIES:= \
          libcutils liblog libdl
 
 LOCAL_MODULE:= mm-qcamera-app
-
 LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_EXECUTABLE)
 

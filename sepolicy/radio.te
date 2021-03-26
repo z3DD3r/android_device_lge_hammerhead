@@ -1,4 +1,4 @@
-# text relocation in /system/vendor/lib/libvdmengine.so
+# text relocation in /vendor/lib/libvdmengine.so
 allow radio system_file:file execmod;
 allow radio vendor_file:file execmod;
 

@@ -25,6 +25,7 @@ LOCAL_C_INCLUDES += \
 
 LOCAL_MODULE:= camera_test
 LOCAL_MODULE_TAGS:= tests
+LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_CFLAGS += -Wall -fno-short-enums -O0
 

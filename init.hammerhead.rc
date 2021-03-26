@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-import init.hammerhead.usb.rc
+import /vendor/etc/init/hw/init.hammerhead.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -26,12 +26,12 @@ on init
     write /proc/sys/vm/page-cluster 0
 
 on fs
-    mount_all ./fstab.hammerhead
-    swapon_all ./fstab.hammerhead
+    mount_all /vendor/etc/fstab.hammerhead
+    swapon_all /vendor/etc/fstab.hammerhead
     restorecon_recursive /persist
     setprop persist.adb.nonblocking_ffs 0
     setprop ro.adb.nonblocking_ffs 0
-    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
+    mount none /vendor/etc/gps.conf /system/etc/gps_debug.conf bind
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -275,29 +275,29 @@ on property:sys.boot_completed=1
     # enable logging of wake up reasons to kernel logs
     write /sys/module/msm_show_resume_irq/parameters/debug_mask 1
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
     shutdown critical
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
+service qmuxd /vendor/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth wakelock gps
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /vendor/bin/netmgrd
     class main
     group radio system wakelock
 
 # QCOM sensor
-service sensors /system/bin/sensors.qcom
+service sensors /vendor/bin/sensors.qcom
     class main
     user root
     group root wakelock
 
-service irsc_util /system/bin/irsc_util "/vendor/etc/sec_config"
+service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class main
     user root
     oneshot
@@ -316,7 +316,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
@@ -328,7 +328,7 @@ service charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics gps
@@ -345,7 +345,7 @@ service mpdecision /vendor/bin/mpdecision --avg_comp
    group root system readproc
    disabled
 
-service ssr_ramdump /system/bin/subsystem_ramdump -m -t emmc
+service ssr_ramdump /vendor/bin/subsystem_ramdump -m -t emmc
     class main
     user root
     group root system
@@ -363,4 +363,4 @@ service vss_init /vendor/bin/vss_init
     disabled
 
 on property:apexd.status=ready
-    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
+    mount none /vendor/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
