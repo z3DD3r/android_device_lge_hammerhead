@@ -83,19 +83,11 @@
 /data/tombstones/ramdump(/.*)?     u:object_r:ssr_ramdump_data_file:s0
 /data/vendor/mediadrm(/.*)?        u:object_r:mediadrm_vendor_data_file:s0
 
-# rmt_storage is a qualcomm specific daemon responsible
-# for servicing modem filesystem requests.
-/system/bin/rmt_storage            u:object_r:rmt_storage_exec:s0
-/system/vendor/bin/bdAddrLoader    u:object_r:bluetooth_loader_exec:s0
-/system/bin/qmuxd                  u:object_r:qmuxd_exec:s0
-/system/bin/netmgrd                u:object_r:netmgrd_exec:s0
-/system/bin/mpdecision             u:object_r:mpdecision_exec:s0
-/system/bin/sensors\.qcom          u:object_r:sensors_exec:s0
-/system/bin/mm-qcamera-daemon      u:object_r:mm-qcamerad_exec:s0
-/system/bin/qseecomd               u:object_r:tee_exec:s0
-/system/bin/subsystem_ramdump      u:object_r:subsystem_ramdump_exec:s0
-/system/vendor/bin/vss_init        u:object_r:vss_exec:s0
-/system/bin/irsc_util              u:object_r:irsc_util_exec:s0
+# Bluetooth MAC loader
+/(system/vendor|vendor)/bin/bdAddrLoader           u:object_r:bluetooth_loader_exec:s0
+
+# Vendor specific init
+/(system/vendor|vendor)/bin/vss_init               u:object_r:vss_exec:s0
 
 # Persist firmware filesystem
 /persist/camera_calibration(/.*)? u:object_r:persist_camera_file:s0
@@ -162,3 +154,9 @@
 /sys/module/subsystem_restart/parameters/enable_debug    u:object_r:sysfs_ramdumps:s0
 /sys/module/subsystem_restart/parameters/enable_ramdumps u:object_r:sysfs_ramdumps:s0
 /sys/module/msm_show_resume_irq/parameters/debug_mask    u:object_r:sysfs_ramdumps:s0
+
+#/tombstones symlink
+/tombstones u:object_r:tombstone_data_file:s0
+
+#/vtc symlink
+/vtc u:object_r:vendor_configs_file:s0

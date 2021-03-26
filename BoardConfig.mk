@@ -101,6 +101,8 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
+BOARD_ROOT_EXTRA_SYMLINKS += /vendor/etc:/vtc
+BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 
 # Define kernel config for inline building
 TARGET_KERNEL_CONFIG := lineageos_hammerhead_defconfig
@@ -133,7 +135,7 @@ USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/cameraserver=22 \
     /system/bin/mediaserver=22 \
-    /system/bin/mm-qcamera-daemon=22
+    /vendor/bin/mm-qcamera-daemon=22
 
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
 
@@ -146,8 +148,8 @@ endif
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/mpdecision|libshim_atomic.so \
-    /system/lib/libril-qc-qmi-1.so|libshim_ril.so
+    /vendor/bin/mpdecision|libshim_atomic.so \
+    /vendor/lib/libril-qc-qmi-1.so|libshim_ril.so
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
