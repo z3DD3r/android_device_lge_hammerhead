@@ -4,9 +4,7 @@ on boot
 
 on post-fs-data
     # Create folder for timekeep
-    mkdir /data/time 0770 system system
     mkdir /data/vendor/time 0770 system system
-    chmod 0770 /data/time/ats_2
     chmod 0770 /data/vendor/time/ats_2
 
 # Time service
