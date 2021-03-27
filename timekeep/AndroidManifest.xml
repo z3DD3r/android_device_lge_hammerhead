@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sony.timekeep"
+    coreApp="true"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application android:label="TimeKeepReceiver">
+        <receiver android:name="TimeKeep">
+          <intent-filter>
+            <action android:name="android.intent.action.TIME_SET" />
+            <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+          </intent-filter>
+        </receiver>
+    </application>
+</manifest>
