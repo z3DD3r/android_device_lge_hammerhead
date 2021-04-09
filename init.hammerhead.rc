@@ -50,6 +50,9 @@ on early-boot
     # adsp
     write /sys/kernel/boot_adsp/boot 1
 
+    # start qseecomd early
+    start vendor.qseecomd
+
 on boot
     # bluetooth
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -305,7 +308,7 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service qseecomd /vendor/bin/qseecomd
+service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root

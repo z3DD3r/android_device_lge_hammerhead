@@ -248,6 +248,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# HW Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 # NFC packages
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl-bcm \
