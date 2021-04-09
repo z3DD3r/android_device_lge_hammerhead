@@ -34,6 +34,9 @@
 # Power HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.hh     u:object_r:hal_power_default_exec:s0
 
+# Power stats HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock              u:object_r:hal_power_stats_default_exec:s0
+
 # Vibrator HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.1-service\.hh  u:object_r:hal_vibrator_default_exec:s0
 
