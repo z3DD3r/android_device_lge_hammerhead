@@ -24,6 +24,9 @@ TARGET_CPU_VARIANT_RUNTIME := krait
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x00000000
