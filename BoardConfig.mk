@@ -104,7 +104,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/etc:/vtc
-BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware:/vfw
 BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 
 # Define kernel config for inline building
@@ -136,9 +135,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/bin/mm-qcamera-daemon=22
 
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
-
-# Keymaster
-TARGET_PROVIDES_KEYMASTER := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
