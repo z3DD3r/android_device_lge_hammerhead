@@ -9,6 +9,10 @@ allow mpdecision mpctl_socket:sock_file create_file_perms;
 allow mpdecision sysfs_mpdecision:dir r_dir_perms;
 allow mpdecision sysfs_mpdecision:file rw_file_perms;
 
+#
+allow mpdecision sysfs_surfaceflinger:dir r_dir_perms;
+allow mpdecision sysfs_surfaceflinger:file rw_file_perms;
+
 # This is needed to allow mpdecision to look at system_server's
 # /proc/PID/status file.
 r_dir_file(mpdecision, system_server)

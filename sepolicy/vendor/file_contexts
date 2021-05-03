@@ -43,9 +43,6 @@
 # Block labeling
 /dev/block/platform/msm_sdcc\.1/by-name/metadata     u:object_r:metadata_block_device:s0
 
-# MPdecision
-/dev/socket/mpctl                      u:object_r:mpctl_socket:s0
-
 ## Radio related
 # modem driver
 /dev/mdm                               u:object_r:radio_device:s0

@@ -80,7 +80,7 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libstagefright_hdcp.so
 vendor/lib/libxml.so
-vendor/bin/mpdecision
+vendor/bin/mpdecision|0ff3f3618fc076db6a1e3fd9b4a554b3
 vendor/bin/thermal-engine
 vendor/bin/vss_init
 vendor/etc/qcril.db
@@ -196,6 +196,7 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqomx_jpegenc.so
+vendor/lib/libqti-perfd-client.so|991b75a09dd8ea559a8aea7f9acb2d48
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libsensor_reg.so

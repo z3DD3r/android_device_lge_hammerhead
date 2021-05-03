@@ -149,7 +149,6 @@ endif
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /vendor/bin/mpdecision|libshim_atomic.so \
     /vendor/lib/libril-qc-qmi-1.so|libshim_ril.so
 
 # Power

@@ -172,6 +172,10 @@ on post-fs-data
     write /persist/sensors/sensors_settings 1
     chmod 660 /persist/sensors/sensors_settings
 
+    # Create PERFD deamon related dirs
+    mkdir /data/misc/perfd 2775 root system
+    mkdir /data/system/perfd 2775 root system
+
     # Ecc_Handler qcril.db
     mkdir /data/misc/radio 0770 radio radio
     symlink /vendor/etc/qcril.db /data/misc/radio/qcril.db
