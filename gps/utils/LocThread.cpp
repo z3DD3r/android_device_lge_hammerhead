@@ -64,7 +64,7 @@ public:
 // threashold approprietly for destroy(), e.g. mRefCount.
 LocThreadDelegate::LocThreadDelegate(LocThread::tCreate creator,
         const char* threadName, LocRunnable* runnable, bool joinable) :
-    mRunnable(runnable), mJoinable(joinable), mThandle(NULL),
+    mRunnable(runnable), mJoinable(joinable), mThandle(0),
     mMutex(PTHREAD_MUTEX_INITIALIZER), mRefCount(2) {
 
     // set up thread name, if nothing is passed in
@@ -78,7 +78,7 @@ LocThreadDelegate::LocThreadDelegate(LocThread::tCreate creator,
         mThandle = creator(threadName, threadMain, this);
     } else if (pthread_create(&mThandle, NULL, threadMain, this)) {
         // pthread_create() failed
-        mThandle = NULL;
+        mThandle = 0;
     }
 
     if (mThandle) {

@@ -43,7 +43,7 @@
 
 // forward declaration
 class AgpsStateMachine;
-class Subscriber;
+struct Subscriber;
 
 // NIF resource events
 typedef enum {

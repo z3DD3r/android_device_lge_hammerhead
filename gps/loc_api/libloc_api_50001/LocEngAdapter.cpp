@@ -74,10 +74,10 @@ LocEngAdapter::LocEngAdapter(LOC_API_ADAPTER_EVENT_MASK_T mask,
                    :context),
     mOwner(owner), mInternalAdapter(new LocInternalAdapter(this)),
     mUlp(new UlpProxyBase()), mNavigating(false),
+    mPowerVote(0),
     mSupportsAgpsRequests(false),
     mSupportsPositionInjection(false),
-    mSupportsTimeInjection(false),
-    mPowerVote(0)
+    mSupportsTimeInjection(false)
 {
     memset(&mFixCriteria, 0, sizeof(mFixCriteria));
     mFixCriteria.mode = LOC_POSITION_MODE_INVALID;
