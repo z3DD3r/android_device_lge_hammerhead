@@ -31,7 +31,7 @@
 #define __LOG_UTIL_H__
 
 #ifndef USE_GLIB
-#include <utils/Log.h>
+#include <log/log.h>
 #endif /* USE_GLIB */
 
 #ifdef USE_GLIB

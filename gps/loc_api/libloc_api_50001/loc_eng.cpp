@@ -50,7 +50,7 @@
 #include <cutils/sched_policy.h>
 #ifndef USE_GLIB
 #include <utils/SystemClock.h>
-#include <utils/Log.h>
+#include <log/log.h>
 #endif /* USE_GLIB */
 
 #ifdef USE_GLIB
