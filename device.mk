@@ -205,8 +205,6 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     android.hardware.camera.provider@2.4-impl \
     camera.hammerhead \
-    mm-jpeg-interface-test \
-    mm-qcamera-app \
     Snap
 
 PRODUCT_PACKAGES += \

@@ -55,5 +55,3 @@ LOCAL_MODULE := camera.$(TARGET_DEVICE)
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
-
-#include $(LOCAL_PATH)/test/Android.mk
