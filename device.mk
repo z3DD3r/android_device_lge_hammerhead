@@ -490,6 +490,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Device was launched with K
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 
+# Tweaks for 'low ram' devices
+$(call inherit-product-if-exists, $(LOCAL_PATH)/lowram/device.mk)
+
 # Broadcom WIFI driver
 $(call inherit-product-if-exists, $(LOCAL_PATH)/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
 

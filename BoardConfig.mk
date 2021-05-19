@@ -154,4 +154,7 @@ TARGET_LD_SHIM_LIBS := \
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
+# Tweaks for 'low ram' devices
+-include device/lge/hammerhead/lowram/BoardConfig.mk
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
